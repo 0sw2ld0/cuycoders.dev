@@ -5,6 +5,9 @@ Web estática de CuyCoders, publicada con GitHub Pages en https://cuycoders.dev.
 - `/alfalfa/`: AlfalfaCode, el agente de programación de código abierto.
 - `/alfalfa/cloud/`: Alfalfa Cloud y sus códigos de cortesía.
 - `/alfalfa/privacidad/`: aviso de privacidad y condiciones de Alfalfa Cloud.
+- `/alfalfa/instalar.sh`: el instalador de la CLI (`curl -fsSL https://cuycoders.dev/alfalfa/instalar.sh | sh`).
+  Es una copia de `alfalfa/instalar.sh` de [AlfalfaCode](https://github.com/0sw2ld0/AlfalfaCode): no se edita aquí,
+  se vuelve a copiar cuando cambia allí.
 
 Sin compilación: HTML, CSS y un poco de JavaScript. Para verla en local:
 

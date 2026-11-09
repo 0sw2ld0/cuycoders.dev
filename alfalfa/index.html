@@ -63,18 +63,30 @@
       <div class="instalar">
         <div class="pestanas" role="tablist" aria-label="Cómo instalarlo">
           <button role="tab" id="t-terminal" aria-controls="p-terminal" aria-selected="true">Terminal</button>
+          <button role="tab" id="t-brew" aria-controls="p-brew" aria-selected="false" tabindex="-1">Homebrew</button>
           <button role="tab" id="t-mac" aria-controls="p-mac" aria-selected="false" tabindex="-1">App de Mac</button>
+          <button role="tab" id="t-codigo" aria-controls="p-codigo" aria-selected="false" tabindex="-1">Desde el código</button>
         </div>
         <div class="panel-instalar" id="p-terminal" role="tabpanel" aria-labelledby="t-terminal">
+<pre><span class="comentario"># Sin sudo ni Python; comprueba la huella y la firma</span>
+<span class="indicador">$ </span><span class="orden">curl -fsSL https://cuycoders.dev/alfalfa/instalar.sh | sh</span>
+<span class="indicador">$ </span><span class="orden">alfalfa "corrige la prueba que falla"</span></pre>
+          <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
+        </div>
+        <div class="panel-instalar" id="p-brew" role="tabpanel" aria-labelledby="t-brew" hidden>
+<pre><span class="indicador">$ </span><span class="orden">brew install --cask 0sw2ld0/tap/alfalfacode</span>
+<span class="indicador">$ </span><span class="orden">brew install 0sw2ld0/tap/alfalfa</span></pre>
+          <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
+        </div>
+        <div class="panel-instalar" id="p-mac" role="tabpanel" aria-labelledby="t-mac" hidden>
+<pre><span class="comentario"># El DMG firmado y notarizado; se actualiza sola</span>
+<a href="https://github.com/0sw2ld0/AlfalfaCode/releases/latest">github.com/0sw2ld0/AlfalfaCode/releases/latest</a></pre>
+        </div>
+        <div class="panel-instalar" id="p-codigo" role="tabpanel" aria-labelledby="t-codigo" hidden>
 <pre><span class="indicador">$ </span><span class="orden">git clone https://github.com/0sw2ld0/AlfalfaCode</span>
 <span class="indicador">$ </span><span class="orden">cd AlfalfaCode &amp;&amp; python3.11 -m venv .venv</span>
 <span class="indicador">$ </span><span class="orden">.venv/bin/pip install -e .</span>
 <span class="indicador">$ </span><span class="orden">.venv/bin/alfalfa "corrige la prueba que falla"</span></pre>
-          <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
-        </div>
-        <div class="panel-instalar" id="p-mac" role="tabpanel" aria-labelledby="t-mac" hidden>
-<pre><span class="comentario"># Desde el mismo clon: compila y abre la app de Mac</span>
-<span class="indicador">$ </span><span class="orden">cd alfalfa-mac &amp;&amp; swift run AlfalfaCode</span></pre>
           <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
         </div>
       </div>
@@ -83,7 +95,7 @@
         <a class="boton boton-principal" href="https://github.com/0sw2ld0/AlfalfaCode"><svg aria-hidden="true"><use href="#i-github"/></svg>Ver el código en GitHub</a>
         <a class="boton boton-segundo" href="https://github.com/0sw2ld0/AlfalfaCode#readme">Leer la documentación</a>
       </div>
-      <p class="nota">Para macOS. Código abierto con licencia MIT. La app de Mac todavía se compila desde el repositorio.</p>
+      <p class="nota">Para Mac con Apple Silicon y macOS 14 o posterior. Código abierto con licencia MIT. La primera vez, sin claves, te ofrece los modelos gratis y conecta OpenRouter con un clic. <a href="https://github.com/0sw2ld0/AlfalfaCode#instalar">Cómo actualizarlo o desinstalarlo</a>.</p>
       </div>
       </div>
 
@@ -178,8 +190,8 @@
     <div class="envoltura">
       <h2 id="empezar-t">Empieza en tres pasos</h2>
       <div class="pasos">
-        <div class="paso-inicio"><h3>Instálalo</h3><p>Clona el repositorio y crea su entorno de Python 3.11. Con eso ya tienes la orden <code>alfalfa</code>.</p></div>
-        <div class="paso-inicio"><h3>Elige un modelo</h3><p>Ollama en tu Mac, sin coste; un modelo de «Gratis ahora»; tu clave de OpenAI o de otro proveedor, o un código de Alfalfa Cloud si te dieron uno.</p></div>
+        <div class="paso-inicio"><h3>Instálalo</h3><p>Una orden en la terminal o con Homebrew, o el DMG de la app. No hace falta Python, git ni Xcode: trae su propio motor.</p></div>
+        <div class="paso-inicio"><h3>Elige un modelo</h3><p>Sin claves, la primera vez te ofrece «Gratis ahora» y conecta OpenRouter en el navegador sin pegar nada. También Ollama en tu Mac, sin coste; tu clave de OpenAI o de otro proveedor, o un código de Alfalfa Cloud si te dieron uno.</p></div>
         <div class="paso-inicio"><h3>Encarga y decide</h3><p>Describe lo que quieres. El agente te enseña su plan, trabaja y te pide permiso cuando hace falta.</p></div>
       </div>
     </div>
