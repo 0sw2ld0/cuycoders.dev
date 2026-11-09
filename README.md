@@ -2,15 +2,7 @@
 
 Web estática de CuyCoders, publicada con GitHub Pages en https://cuycoders.dev.
 
-- `/alfalfa/`: AlfalfaCode, el agente de programación de código abierto.
-- `/alfalfa/cloud/`: Alfalfa Cloud y sus códigos de cortesía.
-- `/alfalfa/privacidad/`: aviso de privacidad y condiciones de Alfalfa Cloud.
-
-Sin compilación: HTML, CSS y un poco de JavaScript. Para verla en local:
-
-```bash
-python3 -m http.server 8791
-```
-
-Los colores salen de la app de Mac de AlfalfaCode (`alfalfa-mac/Sources/AlfalfaCode/Theme.swift`).
-Las fuentes van servidas desde aquí; sus licencias están en `assets/fonts/LICENCIAS.txt`.
+AlfalfaCode tiene su propia web en https://alfalfacode.cuycoders.dev (repositorio
+[0sw2ld0/alfalfacode-web](https://github.com/0sw2ld0/alfalfacode-web)). Las direcciones
+antiguas `/alfalfa/`, `/alfalfa/cloud/` y `/alfalfa/privacidad/` redirigen allí, porque la app
+0.99.1 las lleva dentro.
