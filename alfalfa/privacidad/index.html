@@ -72,6 +72,7 @@
       <h2 id="terceros">A quién se los pasa</h2>
       <ul>
         <li><strong>OpenAI</strong>, para GPT-6 Luna. El servicio le pide que no guarde la conversación (<code>store: false</code>). Aun así, OpenAI aplica su propia política, que puede conservar datos un tiempo para vigilar abusos.</li>
+        <li><strong>Anthropic</strong>, para Claude Haiku 5.5. Su API no tiene una opción para pedir que no guarde la conversación, así que Anthropic aplica su propia política, que puede conservar datos un tiempo para vigilar abusos. Para abaratar cada petición, Anthropic guarda en caché el principio de la conversación durante 5 minutos. Con la conversación solo va un identificador corto de tu código, nunca el código ni tu nombre.</li>
         <li><strong>Ollama</strong>, para los modelos de Ollama Cloud, con su propia política de privacidad.</li>
         <li><strong>DigitalOcean</strong>, donde está el servidor y su base de datos.</li>
       </ul>
@@ -102,7 +103,7 @@
         <li>Alfalfa Cloud es un servicio de cortesía, por invitación y sin coste para ti. Se da tal cual, sin garantías de disponibilidad, calidad ni resultados.</li>
         <li>CuyCoders puede cambiar los modelos y los topes, pausar o retirar cualquier código y apagar el servicio en cualquier momento, sin aviso.</li>
         <li>Tu código es personal: no lo compartas, no lo revendas y no intentes saltarte sus topes.</li>
-        <li>No lo uses para nada ilegal, para dañar a otros ni contra las políticas de uso de OpenAI y Ollama.</li>
+        <li>No lo uses para nada ilegal, para dañar a otros ni contra las políticas de uso de OpenAI, Anthropic y Ollama.</li>
         <li>Lo que hagan los modelos en tu proyecto es responsabilidad tuya: revisa los cambios antes de aceptarlos y de publicarlos.</li>
       </ul>
       <p>Si cambiamos este aviso, cambiará la fecha de arriba. Para cualquier duda: <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a>.</p>
