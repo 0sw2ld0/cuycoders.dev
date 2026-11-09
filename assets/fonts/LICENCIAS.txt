@@ -1,0 +1,8 @@
+Fuentes servidas desde esta web, sin cambios, en su subconjunto latino (paquetes de Fontsource):
+
+- Bricolage Grotesque, de Mathieu Triay. SIL Open Font License 1.1.
+  https://github.com/ateliertriay/bricolage
+- JetBrains Mono, de JetBrains. SIL Open Font License 1.1.
+  https://github.com/JetBrains/JetBrainsMono
+
+Texto de la licencia: https://openfontlicense.org

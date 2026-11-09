@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlfalfaCode · el agente de programación de código abierto para tu Mac</title>
+<meta name="description" content="AlfalfaCode es un agente de programación de código abierto (MIT) que trabaja en tu Mac con el modelo que elijas: Ollama, OpenAI o cualquier proveedor compatible. Pide permiso antes de lo que importa.">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/sitio.css?v=3">
+<meta property="og:title" content="AlfalfaCode">
+<meta property="og:description" content="El agente de programación de código abierto para tu Mac, con el modelo que elijas.">
+<meta property="og:image" content="https://cuycoders.dev/assets/alfalfacode-256.png">
+<meta name="theme-color" content="#1c1c1a">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-hoja" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V10M12 13C8 13 5 10.5 5 6c4.5 0 7 2.5 7 7ZM12 10c0-4 2.5-6.5 7-6.5 0 4.5-3 6.5-7 6.5Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-copiar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V6.5A2.5 2.5 0 0 0 13.5 4h-7A2.5 2.5 0 0 0 4 6.5v7A2.5 2.5 0 0 0 6.5 16H8"/></symbol>
+  <symbol id="i-hecho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-circulo-hecho" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.8 2.7L16 9.6"/></symbol>
+  <symbol id="i-circulo-medio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></symbol>
+  <symbol id="i-mas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="m7 10 3 2.5L7 15M12.5 15H17"/></symbol>
+  <symbol id="i-ventana" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18M9 9v10.5"/></symbol>
+  <symbol id="i-enchufe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v4M15 3v4M6.5 7h11v3.5a5.5 5.5 0 0 1-11 0ZM12 16v5"/></symbol>
+  <symbol id="i-capas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12.5 9 5 9-5M3 16.5l9 5 9-5"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.5 3 7.8 7 9.5 4-1.7 7-5 7-9.5V6l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-caja" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5v-9Z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></symbol>
+  <symbol id="i-ramas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5.5" r="2.2"/><circle cx="6" cy="18.5" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M6 7.7v8.6M8.2 5.5c5 0 7.6 2.2 7.8 5.3M8.2 18.5c5 0 7.6-2.2 7.8-5.3"/></symbol>
+  <symbol id="i-comprimir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M12 3v4l-2.5-2.5M12 7l2.5-2.5M12 21v-4l-2.5 2.5M12 17l2.5 2.5"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></symbol>
+  <symbol id="i-pieza" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h3a2 2 0 1 1 4 0h3v5a2 2 0 1 1 0 4v6h-5a2 2 0 1 0-4 0H4v-5a2 2 0 1 0 0-4V4h5Z"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/><path d="M12 8v4.5l3 1.8"/></symbol>
+</svg>
+<template id="icono-hecho"><svg aria-hidden="true"><use href="#i-circulo-hecho"/></svg></template>
+
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="/alfalfa/"><img src="/assets/alfalfacode.svg" alt="" width="30" height="30">AlfalfaCode</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#funciones">Funciones</a>
+      <a href="/alfalfa/cloud/">Alfalfa Cloud</a>
+      <a href="https://github.com/0sw2ld0/AlfalfaCode#readme">Documentación</a>
+      <a class="nav-gh" href="https://github.com/0sw2ld0/AlfalfaCode"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <section class="portada">
+    <div class="envoltura">
+      <div class="portada-cabeza">
+      <div class="portada-texto">
+      <h1>El agente de programación <em>que vive en tu Mac</em></h1>
+      <p class="entrada">AlfalfaCode lee tu proyecto, escribe código y ejecuta órdenes con el modelo que elijas: Ollama en tu Mac, Ollama Cloud, OpenAI o cualquier proveedor compatible. Las órdenes corren en el sandbox de macOS, y lo que sale de él te lo pregunta antes.</p>
+      </div>
+      <div class="portada-accion">
+      <div class="instalar">
+        <div class="pestanas" role="tablist" aria-label="Cómo instalarlo">
+          <button role="tab" id="t-terminal" aria-controls="p-terminal" aria-selected="true">Terminal</button>
+          <button role="tab" id="t-mac" aria-controls="p-mac" aria-selected="false" tabindex="-1">App de Mac</button>
+        </div>
+        <div class="panel-instalar" id="p-terminal" role="tabpanel" aria-labelledby="t-terminal">
+<pre><span class="indicador">$ </span><span class="orden">git clone https://github.com/0sw2ld0/AlfalfaCode</span>
+<span class="indicador">$ </span><span class="orden">cd AlfalfaCode &amp;&amp; python3.11 -m venv .venv</span>
+<span class="indicador">$ </span><span class="orden">.venv/bin/pip install -e .</span>
+<span class="indicador">$ </span><span class="orden">.venv/bin/alfalfa "corrige la prueba que falla"</span></pre>
+          <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
+        </div>
+        <div class="panel-instalar" id="p-mac" role="tabpanel" aria-labelledby="t-mac" hidden>
+<pre><span class="comentario"># Desde el mismo clon: compila y abre la app de Mac</span>
+<span class="indicador">$ </span><span class="orden">cd alfalfa-mac &amp;&amp; swift run AlfalfaCode</span></pre>
+          <button class="copiar" type="button" aria-label="Copiar"><svg class="icono-copiar" aria-hidden="true"><use href="#i-copiar"/></svg><svg class="hecho" aria-hidden="true"><use href="#i-hecho"/></svg></button>
+        </div>
+      </div>
+
+      <div class="acciones">
+        <a class="boton boton-principal" href="https://github.com/0sw2ld0/AlfalfaCode"><svg aria-hidden="true"><use href="#i-github"/></svg>Ver el código en GitHub</a>
+        <a class="boton boton-segundo" href="https://github.com/0sw2ld0/AlfalfaCode#readme">Leer la documentación</a>
+      </div>
+      <p class="nota">Para macOS. Código abierto con licencia MIT. La app de Mac todavía se compila desde el repositorio.</p>
+      </div>
+      </div>
+
+      <div class="escena">
+        <div class="ventana" id="demo" aria-label="Ilustración de la app de AlfalfaCode" role="group">
+          <div class="ventana-barra" aria-hidden="true"><i></i><i></i><i></i><span>AlfalfaCode</span></div>
+          <aside class="lateral" aria-hidden="true">
+            <div class="nueva"><svg><use href="#i-mas"/></svg>Nueva sesión</div>
+            <h4>calculadora</h4>
+            <div class="sesion activa">Arreglar la suma de calc.py</div>
+            <div class="sesion">Añadir la división entera</div>
+            <h4>mi-web</h4>
+            <div class="sesion">Revisar el formulario</div>
+            <div class="sesion">Traducir los textos</div>
+            <div class="pie"><b>A</b>Ana <small>· Ollama</small></div>
+          </aside>
+          <div class="chat">
+            <div class="mensajes">
+              <div class="burbuja">La suma de calc.py falla con números negativos. Arréglala y pruébalo.</div>
+              <p class="respuesta">Encontré el error: <code>sumar()</code> aplicaba <code>abs()</code> a cada número. Lo quité y añadí una prueba con negativos.</p>
+              <div class="plan" aria-label="Plan del agente">
+                <div class="paso hecho"><svg aria-hidden="true"><use href="#i-circulo-hecho"/></svg>Leer calc.py y sus pruebas</div>
+                <div class="paso hecho"><svg aria-hidden="true"><use href="#i-circulo-hecho"/></svg>Arreglar sumar()</div>
+                <div class="paso ahora" data-paso="probar"><svg aria-hidden="true"><use href="#i-circulo-medio"/></svg>Ejecutar las pruebas</div>
+              </div>
+              <div class="permiso">
+                <p><strong>AlfalfaCode quiere ejecutar una orden.</strong> <span class="decision"></span></p>
+                <pre>python -m pytest tests/test_calc.py</pre>
+                <div class="opciones">
+                  <button type="button" class="si" data-accion="una">Permitir una vez</button>
+                  <button type="button" data-accion="sesion">Permitir en esta sesión</button>
+                  <button type="button" data-accion="no">Rechazar</button>
+                </div>
+              </div>
+              <div class="salida oculto" data-si>tests/test_calc.py ...
+<span class="bien">3 passed</span> in 0.04s</div>
+              <p class="respuesta oculto" data-si>Listo: las tres pruebas pasan, también la nueva con negativos.</p>
+              <p class="respuesta oculto" data-no>De acuerdo, no ejecuto las pruebas. Puedes correrlas tú con <code>python -m pytest</code>.</p>
+            </div>
+            <div class="redactor" aria-hidden="true">
+              <div class="caja">Pide otro cambio…<b><svg><use href="#i-flecha"/></svg></b></div>
+              <div class="fichas"><span>deepseek-v4.1-flash:cloud</span><span>Medio</span><span>Manual</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="pie-ilustracion"><span>Ilustración interactiva con datos de ejemplo: prueba a responder al permiso.</span><span id="estado-demo" role="status" aria-live="polite"></span><button type="button" id="reiniciar-demo" class="oculto">Volver a empezar</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="maneras-t">
+    <div class="envoltura">
+      <h2 id="maneras-t">Úsalo donde trabajas</h2>
+      <p class="bajada">El mismo agente, con las mismas sesiones y los mismos permisos, desde tres sitios.</p>
+      <div class="maneras">
+        <div class="manera">
+          <h3><svg aria-hidden="true"><use href="#i-terminal"/></svg>Terminal</h3>
+          <p>La orden <code>alfalfa</code> recibe un encargo y trabaja en la carpeta actual. Retoma o bifurca cualquier sesión desde un turno.</p>
+<pre>alfalfa --reanudar ID "sigue"</pre>
+        </div>
+        <div class="manera">
+          <h3><svg aria-hidden="true"><use href="#i-ventana"/></svg>App de Mac</h3>
+          <p>Sesiones a la izquierda, el plan y los permisos en la conversación, el modelo y el modo junto al redactor. Hecha en SwiftUI.</p>
+<pre>swift run AlfalfaCode</pre>
+        </div>
+        <div class="manera">
+          <h3><svg aria-hidden="true"><use href="#i-enchufe"/></svg>Dentro de tu app</h3>
+          <p>Con <code>--stdio</code> habla JSONL, así que cualquier aplicación puede llevar el agente dentro y cambiar sus ajustes.</p>
+<pre>alfalfa --stdio</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="funciones" aria-labelledby="funciones-t">
+    <div class="envoltura">
+      <h2 id="funciones-t">Lo que necesitas para delegar de verdad</h2>
+      <div class="funciones">
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-capas"/></svg><h3>El modelo que quieras</h3><p>Ollama en tu Mac u Ollama Cloud, OpenAI con tu clave, OpenRouter, OpenCode Zen o cualquier proveedor compatible del catálogo de models.dev. «Gratis ahora» reúne los modelos de coste cero que saben usar herramientas.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-escudo"/></svg><h3>Tú pones los límites</h3><p>Cinco modos de permisos: auto, manual, ediciones, plan y omitir. Cada permiso vale una vez o toda la sesión, y las reglas prohibidas siempre mandan.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-caja"/></svg><h3>Sandbox de macOS</h3><p>Las órdenes corren dentro de Seatbelt y sin red. Si una necesita internet o salir del sandbox, el agente te lo pide antes.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-ramas"/></svg><h3>Subagentes</h3><p>El agente reparte el trabajo entre subagentes que avanzan a la vez y le entregan su informe al terminar.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-comprimir"/></svg><h3>Contexto que no se acaba</h3><p>Cuando la conversación llega al límite del modelo, la compacta en un resumen y sigue trabajando. Adaptado de la compactación de Codex.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-lupa"/></svg><h3>Busca en la web desde tu conexión</h3><p>Puede buscar y leer páginas con CuySearch, desde tu propia conexión y sin pasar por ningún servidor central.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-pieza"/></svg><h3>MCP, hooks y habilidades</h3><p>Servidores MCP, complementos, hooks, <code>AGENTS.md</code> y habilidades, compatibles con los de Claude Code.</p></div>
+        <div class="funcion"><svg aria-hidden="true"><use href="#i-reloj"/></svg><h3>Trabajos largos</h3><p>Procesos en segundo plano que siguen entre turnos, el Mac despierto mientras el agente trabaja y sesiones que retomas cuando quieras.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="empezar-t">
+    <div class="envoltura">
+      <h2 id="empezar-t">Empieza en tres pasos</h2>
+      <div class="pasos">
+        <div class="paso-inicio"><h3>Instálalo</h3><p>Clona el repositorio y crea su entorno de Python 3.11. Con eso ya tienes la orden <code>alfalfa</code>.</p></div>
+        <div class="paso-inicio"><h3>Elige un modelo</h3><p>Ollama en tu Mac, sin coste; un modelo de «Gratis ahora»; tu clave de OpenAI o de otro proveedor, o un código de Alfalfa Cloud si te dieron uno.</p></div>
+        <div class="paso-inicio"><h3>Encarga y decide</h3><p>Describe lo que quieres. El agente te enseña su plan, trabaja y te pide permiso cuando hace falta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="campo" aria-labelledby="cloud-t">
+    <svg class="ramita" aria-hidden="true"><use href="#i-hoja"/></svg>
+    <div class="envoltura">
+      <div>
+        <h2 id="cloud-t">¿Te dieron un código CUY?</h2>
+        <p>Alfalfa Cloud da modelos en la nube a algunas personas que prueban AlfalfaCode. Son códigos de cortesía: no se venden y no hay para todo el mundo.</p>
+      </div>
+      <div class="acciones">
+        <a class="boton boton-principal" href="/alfalfa/cloud/">Qué es Alfalfa Cloud</a>
+        <a class="boton boton-segundo" href="/alfalfa/privacidad/">Privacidad</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" aria-labelledby="abierto-t">
+    <div class="envoltura abierto">
+      <div>
+        <h2 id="abierto-t" class="titulo">Todo el código, a la vista</h2>
+        <p class="bajada">El bucle del agente, los permisos, el sandbox y la app de Mac están en GitHub. Puedes leerlo, cambiarlo y llevarlo a tu propia aplicación.</p>
+        <div class="acciones" style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="boton boton-segundo" href="https://github.com/0sw2ld0/AlfalfaCode"><svg aria-hidden="true"><use href="#i-github"/></svg>0sw2ld0/AlfalfaCode</a>
+        </div>
+      </div>
+      <p class="dato" aria-label="Licencia MIT">MIT</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie-sitio">
+  <div class="envoltura">
+    <span>© 2026 CuyCoders · AlfalfaCode es software libre con licencia MIT</span>
+    <nav aria-label="Pie">
+      <a href="/alfalfa/cloud/">Alfalfa Cloud</a>
+      <a href="/alfalfa/privacidad/">Privacidad</a>
+      <a href="https://github.com/0sw2ld0/AlfalfaCode">GitHub</a>
+      <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/sitio.js?v=3"></script>
+</body>
+</html>

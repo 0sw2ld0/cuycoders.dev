@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad y condiciones · Alfalfa Cloud</title>
+<meta name="description" content="Qué datos recibe y guarda Alfalfa Cloud, a quién se los pasa, cuánto tiempo los conserva y las condiciones de uso del servicio.">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/sitio.css?v=3">
+<meta name="theme-color" content="#1c1c1a">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+</svg>
+
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="/alfalfa/"><img src="/assets/alfalfacode.svg" alt="" width="30" height="30">AlfalfaCode</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="/alfalfa/#funciones">Funciones</a>
+      <a class="nav-fija" href="/alfalfa/cloud/">Alfalfa Cloud</a>
+      <a href="https://github.com/0sw2ld0/AlfalfaCode#readme">Documentación</a>
+      <a class="nav-gh" href="https://github.com/0sw2ld0/AlfalfaCode"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="lectura">
+  <div class="envoltura">
+    <nav class="indice" aria-label="En esta página">
+      <strong>En esta página</strong>
+      <a href="#resumen">En pocas palabras</a>
+      <a href="#datos">Qué datos guarda</a>
+      <a href="#mensajes">Tus mensajes</a>
+      <a href="#terceros">A quién se los pasa</a>
+      <a href="#tiempo">Cuánto tiempo</a>
+      <a href="#derechos">Ver o borrar tus datos</a>
+      <a href="#app">Lo que hace la app</a>
+      <a href="#condiciones">Condiciones de uso</a>
+    </nav>
+    <article class="texto">
+      <h1>Privacidad y condiciones</h1>
+      <p class="entrada">Este aviso es de <strong>Alfalfa Cloud</strong>, el servicio de modelos en la nube con códigos de cortesía. AlfalfaCode, el programa, es otra cosa: se instala en tu Mac y no manda nada a CuyCoders salvo que uses Alfalfa Cloud o el botón «Reportar un error».</p>
+      <p class="fecha">Última actualización: 9 de noviembre de 2026. Responsable: CuyCoders, <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a>.</p>
+
+      <div class="destacado" id="resumen">
+        <h2>En pocas palabras</h2>
+        <p><strong>No guardamos el contenido de tus mensajes.</strong> Pasan por el servidor camino del modelo y no se escriben en ninguna base de datos. Sí guardamos tu código, cuánto gasta cada día y cada mes, el nombre del Mac donde lo activaste y los reportes de error que mandes.</p>
+      </div>
+
+      <h2 id="datos">Qué datos guarda el servicio</h2>
+      <table class="tabla">
+        <thead><tr><th scope="col">Dato</th><th scope="col">Para qué</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Tu código</th><td>Para reconocerte. Se guarda solo su huella (hash), nunca el código tal cual, con el nombre que CuyCoders le puso al crearlo, sus topes, sus modelos y su fecha de caducidad.</td></tr>
+          <tr><th scope="row">El Mac donde lo activaste</th><td>Su nombre (el de Ajustes del Sistema ▸ General ▸ Información) y la llave pública del Secure Enclave, para que el código solo funcione en ese Mac.</td></tr>
+          <tr><th scope="row">Uso por día y por mes</th><td>Dólares gastados, tokens de entrada y de salida y número de peticiones por proveedor. Sirve para los topes y para la barra de cuota de la app.</td></tr>
+          <tr><th scope="row">Reportes de error</th><td>Lo que escribes, el contacto si lo das, la versión de AlfalfaCode, tu sistema y el registro de diagnóstico que adjunta la app (hasta 64 KB). Si no tienes código, en vez de tu IP se guarda una huella de ella, solo para limitar los reportes.</td></tr>
+          <tr><th scope="row">Registros técnicos del servidor</th><td>Por cada petición, el servidor anota la IP, la ruta, el método y el código de respuesta en el registro del sistema. Sirven para ver fallos y ataques, y se borran cuando el sistema rota sus registros.</td></tr>
+          <tr><th scope="row">Marcas de un solo uso</th><td>Cada petición firmada lleva un número que no se puede repetir. Se guarda unos minutos para impedir que alguien reenvíe una petición tuya.</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px">Además, mientras el servicio está encendido, la IP de cada conexión se usa en memoria para limitar las peticiones por minuto y frenar a quien prueba códigos a ciegas. Esa cuenta no se escribe en disco.</p>
+
+      <h2 id="mensajes">Tus mensajes</h2>
+      <p>Lo que le pides al modelo, los archivos y las imágenes que AlfalfaCode le enseña y sus respuestas atraviesan el servidor y se mandan al proveedor del modelo. Alfalfa Cloud no los guarda. Solo anota cuántos tokens usaron, para el coste.</p>
+
+      <h2 id="terceros">A quién se los pasa</h2>
+      <ul>
+        <li><strong>OpenAI</strong>, para GPT-6 Luna. El servicio le pide que no guarde la conversación (<code>store: false</code>). Aun así, OpenAI aplica su propia política, que puede conservar datos un tiempo para vigilar abusos.</li>
+        <li><strong>Ollama</strong>, para los modelos de Ollama Cloud, con su propia política de privacidad.</li>
+        <li><strong>DigitalOcean</strong>, donde está el servidor y su base de datos.</li>
+      </ul>
+      <p>No vendemos datos ni los usamos para publicidad. Ni el servicio ni esta web usan cookies ni analítica. Esta web la sirve GitHub Pages, que registra las visitas según su propia política.</p>
+
+      <h2 id="tiempo">Cuánto tiempo</h2>
+      <ul>
+        <li>El código, su Mac y su uso se conservan mientras el código exista. Si lo borramos, o lo pides tú, se borran con él.</li>
+        <li>Los reportes de error se conservan hasta que se resuelven o pides que se borren.</li>
+        <li>Cada día se hace una copia de seguridad de la base de datos, y cada copia se borra a los 14 días.</li>
+        <li>Los registros técnicos duran hasta que el sistema los rota.</li>
+      </ul>
+
+      <h2 id="derechos">Ver o borrar tus datos</h2>
+      <p>Escribe a <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a> desde el correo con el que te dimos el código, o indicando tu código, y te diremos qué hay guardado o lo borraremos. Borrar los datos de un código lo desactiva.</p>
+
+      <h2 id="app">Lo que hace la app</h2>
+      <p>AlfalfaCode guarda sus sesiones y ajustes en tu Mac (<code>~/.alfalfa</code>) y sus claves en el Llavero. Por su cuenta solo se conecta con:</p>
+      <ul>
+        <li>el proveedor de modelos que elijas (Ollama, OpenAI, otro compatible o Alfalfa Cloud);</li>
+        <li>los buscadores web, desde tu conexión, cuando el agente busca algo;</li>
+        <li>GitHub, para ver si hay una versión nueva;</li>
+        <li>Alfalfa Cloud, cuando mandas un reporte de error.</li>
+      </ul>
+
+      <h2 id="condiciones">Condiciones de uso</h2>
+      <ul>
+        <li>Alfalfa Cloud es un servicio de cortesía, por invitación y sin coste para ti. Se da tal cual, sin garantías de disponibilidad, calidad ni resultados.</li>
+        <li>CuyCoders puede cambiar los modelos y los topes, pausar o retirar cualquier código y apagar el servicio en cualquier momento, sin aviso.</li>
+        <li>Tu código es personal: no lo compartas, no lo revendas y no intentes saltarte sus topes.</li>
+        <li>No lo uses para nada ilegal, para dañar a otros ni contra las políticas de uso de OpenAI y Ollama.</li>
+        <li>Lo que hagan los modelos en tu proyecto es responsabilidad tuya: revisa los cambios antes de aceptarlos y de publicarlos.</li>
+      </ul>
+      <p>Si cambiamos este aviso, cambiará la fecha de arriba. Para cualquier duda: <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a>.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="pie-sitio">
+  <div class="envoltura">
+    <span>© 2026 CuyCoders · AlfalfaCode es software libre con licencia MIT</span>
+    <nav aria-label="Pie">
+      <a href="/alfalfa/">AlfalfaCode</a>
+      <a href="/alfalfa/cloud/">Alfalfa Cloud</a>
+      <a href="https://github.com/0sw2ld0/AlfalfaCode">GitHub</a>
+      <a href="mailto:soporte@cuycoders.dev">soporte@cuycoders.dev</a>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/sitio.js?v=3"></script>
+</body>
+</html>
